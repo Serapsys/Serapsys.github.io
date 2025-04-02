@@ -191,26 +191,25 @@
 .title3,
 .title4 {
   position: relative;
-  opacity: 0; /* start invisible */
-  bottom: 40px; /* start lower to slide up */
-  animation: slideDown 4s forwards; /* animation duration and forwards so that it stays visible at the end */
+  opacity: 0; /* Start invisible */
+  bottom: 40px; /* Start lower to slide up */
+  animation: slideDown 4s forwards; /* Animation duration and forwards so that it stays visible at the end */
 }
 
-/* Animation for each title */
 .title1 {
-  animation-delay: 0s; /* No delay, appears first */
+  animation-delay: 0s; /* First one with no delay */
 }
 
 .title2 {
-  animation-delay: 1s; /* Delay of 1 second, appears after title1 */
+  animation-delay: 1s; /* Second one appears 1 second after the first */
 }
 
 .title3 {
-  animation-delay: 2s; /* Delay of 2 seconds, appears after title2 */
+  animation-delay: 2s; /* Third one appears 2 seconds after the first */
 }
 
 .title4 {
-  animation-delay: 3s; /* Delay of 3 seconds, appears after title3 */
+  animation-delay: 3s; /* Fourth one appears 3 seconds after the first */
 }
 
 @keyframes slideDown {
@@ -239,6 +238,7 @@
     bottom: -0px;
   }
 }
+
 
   /* Projects section */
   
