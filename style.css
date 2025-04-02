@@ -175,62 +175,71 @@
     align-items: center;
   }*/
   
-  welcome-section > p,.title1,.title2,.title3,.title4{
-    top: 400px;
-    align-items:center;
+  /* Make sure that the .anim wrapper has position relative */
+.welcome-section > p {
+  top: 400px;
+  align-items: center;
+  opacity: 1;
+  font-size: 3rem;
+  font-weight: 200;
+  font-style: italic;
+  color: var(--main-red);
+}
+
+.title1,
+.title2,
+.title3,
+.title4 {
+  position: relative;
+  opacity: 0; /* start invisible */
+  bottom: 40px; /* start lower to slide up */
+  animation: slideDown 4s forwards; /* animation duration and forwards so that it stays visible at the end */
+}
+
+/* Animation for each title */
+.title1 {
+  animation-delay: 0s; /* No delay, appears first */
+}
+
+.title2 {
+  animation-delay: 1s; /* Delay of 1 second, appears after title1 */
+}
+
+.title3 {
+  animation-delay: 2s; /* Delay of 2 seconds, appears after title2 */
+}
+
+.title4 {
+  animation-delay: 3s; /* Delay of 3 seconds, appears after title3 */
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    bottom: 40px;
+  }
+  10% {
+    bottom: 0;
+    opacity: 0;
+  }
+  35% {
+    bottom: 0;
     opacity: 1;
-    font-size: 3rem;
-    font-weight: 200;
-    font-style: italic;
-    color: var(--main-red);
-   }
+  }
+  50% {
+    opacity: 1;
+    bottom: 0;
+  }
+  65% {
+    opacity: 0;
+    bottom: 0;
+  }
+  80% {
+    opacity: 0;
+    bottom: -0px;
+  }
+}
 
-   
-   .title1,.title2,.title3,.title4{
-     position:;
-     bottom: 0px;
-   }
-   /*animation duration and animation delay are the two values*/
-  .title1{
-    animation: 4s slideDown 4s  infinite;
-    }
-  .title2{
-    animation: 4s slideDown 3s  infinite;
-  }
- .title3{
-    animation: 4s slideDown 4s infinite;
-  }
-  .title4{
-    animation: 4s slideDown 1s  infinite;
-  }
- 
-  @keyframes slideDown{
-    0%{
-      opacity:0;
-      bottom: 40px;
-    }
-    10%{
-      bottom: 0;
-      opacity:0;
-    }
-    35%{
-      bottom:0;
-      opacity:1
-    }
-    50%{
-      opacity:1;
-      bottom:0;
-    }
-    65%{
-      opacity:0;
-      bottom:0;
-    }
-    80%{
-      opacity:0;
-      bottom:-0px;
-    }
-
-  }
   /* Projects section */
   
   .projects-section {
